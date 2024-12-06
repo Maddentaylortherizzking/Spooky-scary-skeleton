@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A website dedicated to brainrot memes and the funniest internet content.">
+  <title>Brainrot Memes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Brainrot Meme Zone</h1>
+    <p>Your daily dose of hilarious and nonsensical internet memes.</p>
+  </header>
+
+  <section class="memes">
+    <h2>Brainrot Memes</h2>
+    <div class="meme-container">
+      <img src="https:/
