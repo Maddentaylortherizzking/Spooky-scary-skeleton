@@ -16,4 +16,109 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff00ff;
+        }
+
+        .meme-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .meme {
+            width: 300px;
+            border: 5px solid #ff00ff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .meme:hover {
+            transform: scale(1.05);
+        }
+
+        .meme img {
+            width: 100%;
+            height: auto;
+        }
+
+        .meme p {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #ff00ff;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff44ff;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #bbb;
+        }
+
+        footer a {
+            color: #ff00ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Brainrot Memes</h1>
+        <p>Your daily dose of chaos and memes!</p>
+    </header>
+
+    <section class="meme-section">
+        <div class="meme">
+            <img src="https://via.placeholder.com/300x200.png?text=Brainrot+Meme+1" alt="Brainrot Meme 1">
+            <p>Brainrot Meme 1</p>
+        </div>
+        <div class="meme">
+            <img src="https://via.placeholder.com/300x200.png?text=Brainrot+Meme+2" alt="Brainrot Meme 2">
+            <p>Brainrot Meme 2</p>
+        </div>
+        <div class="meme">
+            <img src="https://via.placeholder.com/300x200.png?text=Brainrot+Meme+3" alt="Brainrot Meme 3">
+            <p>Brainrot Meme 3</p>
+        </div>
+    </section>
+
+    <a href="https://www.tiktok.com" target="_blank" class="cta-button">Get More Brainrot on TikTok!</a>
+
+    <footer>
+        <p>Made with ❤️ by Brainrot Memes Inc. | <a href="https://www.tiktok.com">Follow us on TikTok!</a></p>
+    </footer>
+
+</body>
+</html>
