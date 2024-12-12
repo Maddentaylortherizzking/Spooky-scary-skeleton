@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainrot Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('ninja.jpg'); /* Replace with the uploaded image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px #000;
+        }
+
+        .link-bar {
+            margin: 20px auto;
+            width: 80%;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .link-bar input[type="url"] {
+            width: 60%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .link-bar button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff007f;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .link-bar button:hover {
+            background-color: #ff3399;
+        }
+
+        .links {
+            margin-top: 20px;
+            text-align: left;
+            padding: 0 10%;
+        }
+
+        .links a {
+            display: block;
+            margin: 10px 0;
+            color: #00ffcc;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .grinch {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Brainrot Central</h1>
+
+        <div class="link-bar">
+            <input type="url" id="memeLink" placeholder="Paste a meme link here...">
+            <button onclick="addMemeLink()">Add Meme</button>
+        </div>
+
+        <div class="links" id="linksContainer">
+            <!-- Links will appear here -->
+        </div>
+    </div>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/e/e8/The_Grinch_%282018_film%29_poster.jpg" alt="The Grinch" class="grinch">
+
+    <script>
+        function addMemeLink() {
+            const memeLink = document.getElementById('memeLink').value;
+            if (memeLink) {
+                const linksContainer = document.getElementById('linksContainer');
+                const newLink = document.createElement('a');
+                newLink.href = memeLink;
+                newLink.target = '_blank';
+                newLink.textContent = memeLink;
+                linksContainer.appendChild(newLink);
+                document.getElementById('memeLink').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
