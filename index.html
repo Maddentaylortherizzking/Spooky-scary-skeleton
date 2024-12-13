@@ -115,103 +115,119 @@
     </section>
 
     <a href="https://www.tiktok.com" target="_blank" class="cta-button">Get More Brainrot on TikTok!</a>
-
-    <footer>
-        <p>Made with ❤️ by Brainrot Memes Inc. | <a href="https://www.tiktok.com">Follow us on TikTok!</a></p>
-    </footer>
-
-</body>
-</html>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Brainrot memes and TikTok content.">
-    <title>Brainrot Memes</title>
+    <title>Brainrot Page</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #101010;
-            color: #f0f0f0;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
+            background-image: url('ninja.jpg'); /* Updated to use the uploaded image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow-x: hidden;
         }
 
-        header {
+        .container {
             text-align: center;
-            margin-bottom: 20px;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 3em;
-            color: #ff00ff;
+            font-size: 3rem;
+            text-shadow: 2px 2px #000;
         }
 
-        .meme-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        .link-bar {
+            margin: 20px auto;
+            width: 80%;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
         }
 
-        .meme {
-            width: 300px;
-            border: 5px solid #ff00ff;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .meme:hover {
-            transform: scale(1.05);
-        }
-
-        .meme img {
-            width: 100%;
-            height: auto;
-        }
-
-        .meme p {
+        .link-bar input[type="url"] {
+            width: 60%;
             padding: 10px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
+            border: none;
+            border-radius: 5px;
         }
 
-        .cta-button {
-            padding: 15px 30px;
-            background-color: #ff00ff;
-            color: #fff;
+        .link-bar button {
+            padding: 10px 20px;
             border: none;
-            border-radius: 30px;
-            font-size: 1.2em;
+            background-color: #ff007f;
+            color: #fff;
+            border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
-            margin-top: 30px;
-            transition: background-color 0.3s ease;
+            font-size: 1rem;
         }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image</title>
-    <link rel="stylesheet" href="styles.css">
+
+        .link-bar button:hover {
+            background-color: #ff3399;
+        }
+
+        .links {
+            margin-top: 20px;
+            text-align: left;
+            padding: 0 10%;
+        }
+
+        .links a {
+            display: block;
+            margin: 10px 0;
+            color: #00ffcc;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .grinch {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 200px;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Welcome to My Website</h1>
-        <p>This is some example text over the background image.</p>
+    <div class="container">
+        <h1>Welcome to Brainrot Central</h1>
+
+        <div class="link-bar">
+            <input type="url" id="memeLink" placeholder="Paste a meme link here...">
+            <button onclick="addMemeLink()">Add Meme</button>
+        </div>
+
+        <div class="links" id="linksContainer">
+            <!-- Links will appear here -->
+        </div>
     </div>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/e/e8/The_Grinch_%282018_film%29_poster.jpg" alt="The Grinch" class="grinch">
+
+    <script>
+        function addMemeLink() {
+            const memeLink = document.getElementById('memeLink').value;
+            if (memeLink) {
+                const linksContainer = document.getElementById('linksContainer');
+                const newLink = document.createElement('a');
+                newLink.href = memeLink;
+                newLink.target = '_blank';
+                newLink.textContent = memeLink;
+                linksContainer.appendChild(newLink);
+                document.getElementById('memeLink').value = '';
+            }
+        }
+    </script>
 </body>
 </html>
-
-      
